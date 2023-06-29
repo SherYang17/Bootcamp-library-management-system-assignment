@@ -34,28 +34,15 @@ public class BookController {
     public String getAllBooks(Model model) {
         List<Book> books = bookRepository.findAll();
         model.addAttribute("books", books);
-        return "book-list";
+        return "bookread";
     }
-
-    @GetMapping("/{id}")
-    public String getBookById(@PathVariable Long id, Model model) {
-        Book book = bookRepository.findById(id).orElse(null);
-        model.addAttribute("book", book);
-        return "book-details";
-    }
-
-//    @GetMapping("/create")
-//    public String showCreateForm(Model model) {
-//        model.addAttribute("book", new Book());
-//        return "book-create";
-//    }
 
     @GetMapping("/create")
     public String showCreateForm(Model model) {
         List<Author> authors = authorRepository.findAll(); // Assuming you have an instance of AuthorRepository
         model.addAttribute("book", new Book());
         model.addAttribute("authors", authors);
-        return "book-create";
+        return "bookcreate";
     }
 
     @PostMapping("/create")
@@ -64,27 +51,98 @@ public class BookController {
         return "redirect:/books";
     }
 
-    @GetMapping("/update/{id}")
-    public String showUpdateForm(@PathVariable Long id, Model model) {
-        Book book = bookRepository.findById(id).orElse(null);
-        model.addAttribute("book", book);
-        return "book-update";
+
+    @GetMapping("/update")
+    public String showUpdateBooks(Model model) {
+        List<Book> books = bookRepository.findAll();
+        model.addAttribute("books", books);
+        return "bookupdate";
     }
 
+
+    @GetMapping("/update/{id}")
+    public String showUpdateForm(@PathVariable("id") Long id, Model model) {
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
+        model.addAttribute("book", book);
+        return "bookupdateedit";
+    }
+
+
     @PostMapping("/update/{id}")
-    public String updateBook(@PathVariable Long id, @ModelAttribute("book") Book updatedBook) {
-        Book book = bookRepository.findById(id).orElse(null);
-        if (book != null) {
-            book.setTitle(updatedBook.getTitle());
-            book.setAuthor(updatedBook.getAuthor());
-            bookRepository.save(book);
-        }
+    public String updateBook(@PathVariable("id") Long id, @ModelAttribute("book") Book updatedBook) {
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
+
+        book.setTitle(updatedBook.getTitle());
+        bookRepository.save(book);
         return "redirect:/books";
     }
 
-    @GetMapping("/delete/{id}")
+    @GetMapping("/delete")
+    public String showDeleteBooks(Model model) {
+        List<Book> books = bookRepository.findAll();
+        model.addAttribute("books", books);
+        return "bookdelete";
+    }
+
+    @PostMapping("/delete/{id}")
     public String deleteBook(@PathVariable Long id) {
         bookRepository.deleteById(id);
         return "redirect:/books";
     }
+
 }
+
+
+
+//    @GetMapping("/update")
+//    public String showUpdateForm(Model model) {
+//        List<Book> books = bookRepository.findAll();
+//        model.addAttribute("books", books);
+//        return "bookupdate";
+//    }
+//
+//    @PostMapping("/update/{id}")
+//    public String updateBook(@PathVariable("id") Long id, @ModelAttribute("book") Book updatedBook) {
+//        Book book = bookRepository.findById(id)
+//                .orElseThrow(() -> new IllegalArgumentException("Invalid book id: " + id));
+//
+//        book.setTitle(updatedBook.getTitle());
+//        bookRepository.save(book);
+//        return "redirect:/books";
+//    }
+
+//    @GetMapping("/update")
+//    public String showupdatebooks (Model model) {
+//        List<Book> books = bookRepository.findAll();
+//        model.addAttribute("books", books);
+//        return "bookupdate";
+//    }
+//
+//    @GetMapping("/update/{id}")
+//    public String showUpdateForm(@PathVariable("id") Long id, Model model) {
+//        Book book = bookRepository.findById(id)
+//                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
+//        model.addAttribute("book", book);
+//        return "bookupdate";
+//    }
+//
+//    @PostMapping("/update/{id}")
+//    public String updateBook(@PathVariable("id") Long id, @ModelAttribute("book") Book updatedBook) {
+//        Book book = bookRepository.findById(id)
+//                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
+//
+//        book.setTitle(updatedBook.getTitle());
+//        bookRepository.save(book);
+//        return "redirect:/books";
+//    }
+
+
+//    @GetMapping("/update/{id}")
+//    public String showUpdateForm(@PathVariable("id") Long id, Model model) {
+//        Book book = bookRepository.findById(id)
+//                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
+//        model.addAttribute("book", book);
+//        return "bookupdateedit";
+//    }

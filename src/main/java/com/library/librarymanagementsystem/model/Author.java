@@ -6,15 +6,12 @@ import java.util.List;
 @Entity
 public class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String name;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany
     private List<Book> books;
-
-    // Constructors, getters, and setters
 
     public Author(String name) {
         this.name = name;
@@ -26,10 +23,7 @@ public class Author {
     }
 
     public Author() {
-
     }
-
-    // Getters and setters omitted for brevity
 
     public Long getId() {
         return id;
