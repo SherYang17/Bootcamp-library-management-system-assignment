@@ -62,5 +62,10 @@ Thank you for taking the time to read this!
 
 
 ## Other Demo's For Reference
+In the below image, it shows the http request with the browser URL as http://localhost:8080/authors/delete. We can see in the Network settings that this is a GET request method. We can see this from the Intellij image below displaying the GET request.
+Line 14: @RequestMapping("/authors")
+Line 22: @GetMapping ("/delete")
+What this means is http://localhost:8080 + /authors + /delete = http://localhost:8080/authors/delete.
+
 <img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/authorsdelete1.png">
 <img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwpostdeletion1.png">
