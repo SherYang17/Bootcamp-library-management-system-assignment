@@ -49,7 +49,7 @@ To run the application:
 - (option 2) Run the LibraryManagementSystemApplication class.
 3. Open your web browser and navigate to http://localhost:8080 to access the application.
 
-You will receive a success message when the application runs
+When the console states that the application has started, it means you are able to access it with no issues in http://localhost:8080.
 <img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg2.png" height = "270">
 
 1. Open your web browser and navigate to http://localhost:8080 to access the application.
