@@ -13,8 +13,8 @@ This is a basic Library Management System built using Spring Boot, Thymeleaf, an
 
 ## File Structure
 <img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg1.png" height="680">
-<img src="https://github.com/SherYang17/library-management-system assignment/blob/master/src/main/resources/images/hwimg2.jpg">
-![image](https://github.com/SherYang17/library-management-system assignment/blob/master/src/main/resources/images/hwimg2.jpg)
+<img src="https://github.com/SherYang17/library-management-system assignment/blob/master/src/main/resources/images/hwimg2.png">
+![image](https://github.com/SherYang17/library-management-system assignment/blob/master/src/main/resources/images/hwimg2.png)
 
 ## Functionality
 
