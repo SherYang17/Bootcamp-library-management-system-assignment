@@ -38,11 +38,8 @@ To run the application:
 
 1. Make sure you have Java and Maven installed on your system.
 2. Run the project by
-(option1) Command mvn clean install and then run the application using the command mvn spring-boot:run.
-
-or
-
-(option 2) Click play beside the LibraryManagement
+- (option 1) Command mvn clean install and then run the application using the command mvn spring-boot:run.
+- (option 2) Click play beside the LibraryManagement
 3. Open your web browser and navigate to http://localhost:8080 to access the application.
 
 To test the CRUD operations:
