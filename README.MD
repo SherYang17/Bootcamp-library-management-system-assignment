@@ -50,7 +50,7 @@ To run the application:
 3. Open your web browser and navigate to http://localhost:8080 to access the application.
 
 When the console states that the application has started, it means you are able to access it with no issues in http://localhost:8080.
-<img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg2.jpg>
+<img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg2.png" height = "270">
 
 1. Open your web browser and navigate to http://localhost:8080 to access the application.
 2. Test the CRUD operations for both Book and Author entities using the provided forms and buttons.
