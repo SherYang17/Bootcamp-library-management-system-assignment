@@ -13,10 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
-
-
-
 import java.util.List;
 
 @Controller
@@ -48,7 +44,7 @@ public class BookController {
     @PostMapping("/create")
     public String createBook(@ModelAttribute("book") Book book) {
         bookRepository.save(book);
-        return "redirect:/books";
+        return "redirect:/books/create";
     }
 
 
@@ -89,60 +85,8 @@ public class BookController {
     @PostMapping("/delete/{id}")
     public String deleteBook(@PathVariable Long id) {
         bookRepository.deleteById(id);
-        return "redirect:/books";
+        return "redirect:/books/delete";
     }
 
 }
 
-
-
-//    @GetMapping("/update")
-//    public String showUpdateForm(Model model) {
-//        List<Book> books = bookRepository.findAll();
-//        model.addAttribute("books", books);
-//        return "bookupdate";
-//    }
-//
-//    @PostMapping("/update/{id}")
-//    public String updateBook(@PathVariable("id") Long id, @ModelAttribute("book") Book updatedBook) {
-//        Book book = bookRepository.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException("Invalid book id: " + id));
-//
-//        book.setTitle(updatedBook.getTitle());
-//        bookRepository.save(book);
-//        return "redirect:/books";
-//    }
-
-//    @GetMapping("/update")
-//    public String showupdatebooks (Model model) {
-//        List<Book> books = bookRepository.findAll();
-//        model.addAttribute("books", books);
-//        return "bookupdate";
-//    }
-//
-//    @GetMapping("/update/{id}")
-//    public String showUpdateForm(@PathVariable("id") Long id, Model model) {
-//        Book book = bookRepository.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
-//        model.addAttribute("book", book);
-//        return "bookupdate";
-//    }
-//
-//    @PostMapping("/update/{id}")
-//    public String updateBook(@PathVariable("id") Long id, @ModelAttribute("book") Book updatedBook) {
-//        Book book = bookRepository.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
-//
-//        book.setTitle(updatedBook.getTitle());
-//        bookRepository.save(book);
-//        return "redirect:/books";
-//    }
-
-
-//    @GetMapping("/update/{id}")
-//    public String showUpdateForm(@PathVariable("id") Long id, Model model) {
-//        Book book = bookRepository.findById(id)
-//                .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
-//        model.addAttribute("book", book);
-//        return "bookupdateedit";
-//    }
