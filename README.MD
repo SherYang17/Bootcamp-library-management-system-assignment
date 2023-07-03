@@ -13,8 +13,6 @@ This is a basic Library Management System built using Spring Boot, Thymeleaf, an
 
 ## File Structure
 <img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg1.png" height="680">
-<img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg2.png" height = "270">
-
 
 ## Functionality
 
@@ -52,8 +50,7 @@ To run the application:
 3. Open your web browser and navigate to http://localhost:8080 to access the application.
 
 You will receive a success message when the application runs
-<img src="https://github.com/SherYang17/library-management-system assignment/blob/master/src/main/resources/images/hwimg2.jpg">
-To test the CRUD operations:
+<img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg2.png" height = "270">
 
 1. Open your web browser and navigate to http://localhost:8080 to access the application.
 2. Test the CRUD operations for both Book and Author entities using the provided forms and buttons.
