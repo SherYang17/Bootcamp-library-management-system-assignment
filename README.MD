@@ -49,6 +49,9 @@ To run the application:
 - (option 2) Run the LibraryManagementSystemApplication class.
 3. Open your web browser and navigate to http://localhost:8080 to access the application.
 
+You will receive a success message when the application runs
+<img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwimg2.jpg
+">
 To test the CRUD operations:
 
 1. Open your web browser and navigate to http://localhost:8080 to access the application.
