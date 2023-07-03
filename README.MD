@@ -60,3 +60,7 @@ When the console states that the application has started, it means you are able 
 This README provides an overview of the Library Management System project, explaining the project setup, the functionality of each component (data models, repositories, controllers, and views), and instructions for running and testing the application.
 Thank you for taking the time to read this!
 
+
+## Other Demo's For Reference
+<img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/authorsdelete1.png">
+<img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwpostdeletion1.png">
