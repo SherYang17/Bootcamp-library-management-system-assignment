@@ -75,6 +75,6 @@ In the below image, it shows the http request with the browser URL as http://loc
 In the below image, I click the Delete button to ID1 or row 1 and the request is made in the browser. We can see under Network tab that clicking the button has created a POST request method. We can see this from the Intellij image below displaying the POST request
 - AuthorController Line 29: @PostMapping ("/delete/{id}")
 - Authordelete.html Line 23: The form action has method="post". What is performed there will apply from the AuthorController. 
-- AuthorController Line 32: Once the button is pressed, the page refreshes and will display remaining Authors
+- AuthorController Line 32: Once the button is pressed, the page refreshes and will display remaining Authors due to return being "redirect:/authors.delete" page.
 
 <img src="https://github.com/SherYang17/library-management-system-assignment/blob/master/src/main/resources/images/hwpostdeletion1.png">
