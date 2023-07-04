@@ -44,9 +44,7 @@ The project includes Thymeleaf templates for each operation (list, create, updat
 To run the application:
 
 1. Make sure you have Java and Maven installed on your system.
-2. Run the project by 
-- (option 1) Command mvn clean install and then run the application using the command mvn spring-boot:run.
-- (option 2) Run the LibraryManagementSystemApplication class.
+2. Run the LibraryManagementSystemApplication class to start the application.
 3. Open your web browser and navigate to http://localhost:8080 to access the application.
 
 When the console states that the application has started, it means you are able to access it with no issues in http://localhost:8080.
